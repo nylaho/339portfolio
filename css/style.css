@@ -57,7 +57,7 @@ li a:hover {
   padding: 20px;
   background-color: pink;
 
-}s
+}
 .navbar a{
   float: left;
   padding: 9px;
@@ -94,8 +94,7 @@ li a:hover {
     border: solid 2px black;
     margin-left: auto;
     margin-right: auto;
-    margin-left: auto;
-    
+    margin-left: auto; 
   }
   .flex-container {
     display: flex;
@@ -105,7 +104,29 @@ li a:hover {
     display: grid;
     grid-template-columns: 1fr;
 
+  
   }
+  .skip{
+    left: 10px;
+    top: -40px;
+    padding: 6px;
+    position:absolute;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+  .skip:focus{
+    top: 20px;
+    background-color: beige;
+    font-size: small;
+  }
+  h1{
+    font-family: cursive;
+    font-size: 50px;
+  }
+
+  html{
+    cursor: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" height="64" width="64"><text y="28" font-size="32">💐</text><path d="M0,2 L0,0 L2,0" fill="red" /></svg>'), auto;
+    }
 
   @media only screen and (min-width: 700px) {
 
@@ -138,4 +159,10 @@ li a:hover {
       padding-top: 30px;
       text-align: center;
     }
+  }
+  @media screen and (prefers-reduced-motion: reduce) {
+    .skip{
+      transition: none;
+    }
+    
   }
